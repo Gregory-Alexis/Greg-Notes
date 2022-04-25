@@ -2,7 +2,7 @@ const http = require("http");
 const app = require("./app");
 const express = require("express");
 const path = require("path");
-require("dotenv").config({ path: "./env" });
+const dotenv = require("dotenv").config();
 
 const normalizePort = (val) => {
   const port = parseInt(val, 10);
@@ -53,7 +53,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 } else {
   app.get("/", (req, res) => {
