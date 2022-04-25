@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "heroku-postbuild": "YARN_PRODUCTION=false yarn add --prefix client yarn build --prefix client"
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn add --prefix client && yarn build --prefix client"
   },
   "repository": "https://github.com/Westindiess/Greg-Notes.git",
   "author": "Westindiess",
