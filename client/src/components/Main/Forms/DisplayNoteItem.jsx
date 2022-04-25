@@ -27,7 +27,7 @@ const DisplayNoteItem = ({ title, note, id }) => {
   return (
     <>
       {!isModalOpen ? (
-        <li className="listNote group" data-aos="zoom-out">
+        <li className="listNote group">
           {!title && !note && (
             <h1 className="text-xl text-gray-500 ">Empty Note</h1>
           )}
