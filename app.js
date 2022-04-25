@@ -6,7 +6,7 @@ const noteRoutes = require("./routes/note");
 const dotenv = require("dotenv").config();
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
