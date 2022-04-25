@@ -32,7 +32,7 @@ const Note = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (title || note) {
-      axios.post("https://greg-keep-note.herokuapp.com/api/note", {
+      axios.post("/api/note", {
         title,
         note,
       });
