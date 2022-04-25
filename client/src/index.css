@@ -48,7 +48,7 @@
   .listNote {
     @apply
     bg-white 
-    mx-2 
+    mx-5 
     p-4 
     rounded-lg 
     mt-10 
@@ -56,5 +56,109 @@
     break-words 
     relative 
     hover:shadow-note
+    xl:mx-2
+  }
+
+  .formNote {
+    @apply
+    flex 
+    items-center 
+    rounded-md 
+    w-96 
+    xl:w-2/6
+  }
+
+  .inputFormNote {
+    @apply
+     outline-none 
+     w-full 
+     mb-2 
+     placeholder:text-gray-500 
+     font-semibold
+  }
+
+  .textAreaFormNote {
+    @apply
+    outline-none 
+    w-full 
+    h-24 
+    cursor-auto 
+    font-light 
+    placeholder:text-gray-500 
+    placeholder:font-semibold
+  }
+
+  .buttonFormNote {
+    @apply
+    bg-blue-500 
+    text-white 
+    px-4 
+    py-2 
+    rounded-full 
+    absolute 
+    bottom-2 
+    right-2
+  }
+
+  .noteStyle {
+    @apply
+    flex 
+    flex-col 
+    items-center 
+    w-full 
+    bg-white 
+    p-5 
+    rounded-lg 
+    relative
+  }
+
+  .formModal {
+    @apply
+    flex 
+    justify-center 
+    absolute 
+    top-48 
+    left-0 
+    right-0
+  }
+
+  .liForm {
+    @apply
+    bg-white 
+    mx-2 
+    p-4 
+    rounded-lg 
+    break-words 
+    relative 
+    h-64 
+    w-128
+  }
+
+  .inputModal {
+    @apply
+    font-semibold 
+    mb-4 
+    mt-2 
+    flex 
+    w-full
+    rounded-lg
+    outline-none
+  }
+
+  .buttonModal {
+    @apply
+    absolute 
+    right-0 
+    bottom-0 
+    px-4 
+    py-1 
+    m-2 
+    bg-gray-200 
+    rounded-md 
+    hover:bg-gray-500 
+    hover:text-gray-200 
+    transition-all 
+    duration-200 
+    ease-in-out
   }
 }
