@@ -5,6 +5,10 @@
   "repository": "https://github.com/Westindiess/Greg-Notes.git",
   "author": "Westindiess <gregoryalexiss@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "17.x",
+    "npm": "8.6.0"
+},
   "dependencies": {
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
