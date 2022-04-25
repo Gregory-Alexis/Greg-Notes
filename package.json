@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
   },
   "repository": "https://github.com/Westindiess/Greg-Notes.git",
   "author": "Westindiess",
