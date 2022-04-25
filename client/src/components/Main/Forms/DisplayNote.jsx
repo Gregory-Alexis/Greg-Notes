@@ -22,7 +22,7 @@ const DisplayNote = () => {
   }, [notes, dispatch]);
 
   return (
-    <ul className="flex flex-wrap px-28">
+    <ul className="flex flex-wrap justify-center pb-5 xl:justify-start xl:px-28">
       {notes.map((el) => (
         <DisplayNoteItem
           title={el.title}
