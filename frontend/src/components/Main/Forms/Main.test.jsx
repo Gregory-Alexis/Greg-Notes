@@ -17,10 +17,31 @@ jest.mock("axios", () => ({
       ],
     }),
 
-    post: () => ({}),
+    post: () => ({
+      data: [
+        {
+          title: "my title",
+          note: "my note",
+        },
+      ],
+    }),
 
-    delete: () => ({}),
-    put: () => ({}),
+    delete: () => ({
+      data: [
+        {
+          title: "my title",
+          note: "my note",
+        },
+      ],
+    }),
+    put: () => ({
+      data: [
+        {
+          title: "my title",
+          note: "my note",
+        },
+      ],
+    }),
   },
 }));
 
@@ -38,14 +59,14 @@ describe("Header tests suits", () => {
     expect(button).toHaveTextContent("Ajouter");
   });
 
-  it("Should be able to open title input when textarea is focus", () => {
+  it("Should be able to open title input when textarea is focus", async () => {
     render(
       <Provider store={store}>
         <Main />
       </Provider>
     );
     screen.getByPlaceholderText("Ajoutez une note...").focus();
-    const title = screen.getByPlaceholderText("Titre");
+    const title = await screen.findByPlaceholderText("Titre");
     expect(title).toBeInTheDocument();
   });
 
@@ -91,30 +112,4 @@ describe("Header tests suits", () => {
     expect(newNote).not.toBeInTheDocument();
     expect(newTitle).not.toBeInTheDocument();
   });
-
-  /* it("Should display Empty Note if tile and note are removed", () => {
-    render(
-      <Provider store={store}>
-        <Main />
-      </Provider>
-    );
-
-    const editButton = screen.getByAltText("edit");
-    expect(editButton).toBeInTheDocument();
-    fireEvent.click(editButton);
-
-    const modifiedTitle = screen.getByTestId("update-input");
-    const modifiedNote = screen.getByTestId("update-textarea");
-
-    fireEvent.change(modifiedTitle, { target: { value: "" } });
-    fireEvent.change(modifiedNote, { target: { value: "" } });
-
-    expect(modifiedTitle.value).toBe("");
-    expect(modifiedNote.value).toBe("");
-
-    const updateButton = screen.getByText("Modifier");
-    expect(updateButton).toBeInTheDocument();
-    fireEvent.click(updateButton);
-    screen.debug();
-  });*/ // test en cours
 });
