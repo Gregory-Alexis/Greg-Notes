@@ -5,7 +5,7 @@ import Note from "./Note";
 const Main = () => {
   return (
     <>
-      <div className="flex justify-center overflow-hidden">
+      <div className="flex justify-center overflow-hidden px-5">
         <Note />
       </div>
       <DisplayNote />
