@@ -39,11 +39,8 @@ const Note = () => {
   };
 
   return (
-    <div className="flex items-center rounded-md w-2/6">
-      <form
-        className="flex flex-col items-center w-full bg-white p-5 rounded-lg relative"
-        ref={ref}
-      >
+    <form className="formNote">
+      <div className="noteStyle" ref={ref}>
         {isActive && (
           <input
             placeholder="Titre"
@@ -51,7 +48,7 @@ const Note = () => {
             type="text"
             value={title}
             onChange={(e) => dispatch(setTitle(e.target.value))}
-            className="outline-none w-full mb-2 placeholder:text-gray-500 font-semibold"
+            className="inputFormNote"
           />
         )}
 
@@ -60,20 +57,20 @@ const Note = () => {
           type="text"
           name="note"
           value={note}
-          className="outline-none w-full h-24 cursor-auto font-light placeholder:text-gray-500 placeholder:font-semibold"
+          className="textAreaFormNote"
           onFocus={() => dispatch(setIsActive(true))}
           onChange={(e) => dispatch(setNote(e.target.value))}
           style={{ resize: "none" }}
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-full absolute bottom-2 right-2"
+          className="buttonFormNote"
           onClick={submitHandler}
         >
           Ajouter
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 };
 
