@@ -12,7 +12,9 @@ const DisplayNote = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("http://localhost:5000/api/note");
+        const result = await axios.get(
+          "https://greg-keep-note.herokuapp.com/api/note"
+        );
         dispatch(setNotes(result.data));
       } catch (error) {
         throw new Error(error);
