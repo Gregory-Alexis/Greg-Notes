@@ -32,7 +32,7 @@ const Note = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (title || note) {
-      axios.post("/api/note", {
+      axios.post("http://localhost:5000/api/note", {
         title,
         note,
       });

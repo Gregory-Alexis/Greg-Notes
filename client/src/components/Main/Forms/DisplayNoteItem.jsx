@@ -17,7 +17,7 @@ const DisplayNoteItem = ({ title, note, id }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const updatedDataBase = (idToUpdate, updateTitle, updateNote) => {
-    axios.put(`/api/note/${id}`, {
+    axios.put(`http://localhost:5000/api/note/${id}`, {
       id: parseInt(idToUpdate),
       title: updateTitle,
       note: updateNote,

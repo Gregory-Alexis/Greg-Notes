@@ -3,7 +3,7 @@ import Trash from "../../../images/trash.svg";
 
 const DeleteButton = ({ id, setIsModalOpen }) => {
   const deleteNote = (id) => {
-    axios.delete(`/api/note/${id}`);
+    axios.delete(`http://localhost:5000/api/note/${id}`);
     setIsModalOpen(false);
   };
 
