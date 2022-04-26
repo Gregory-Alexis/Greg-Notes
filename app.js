@@ -1,7 +1,7 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
 const noteRoutes = require("./routes/note");
 const dotenv = require("dotenv").config();
 
@@ -28,7 +28,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.use("/api/note", noteRoutes);
 
