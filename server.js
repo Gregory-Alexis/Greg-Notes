@@ -41,10 +41,6 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
-} else {
-  app.get("/", (req, res) => {
-    res.send("Api is running");
-  });
 }
 
 const port = process.env.PORT || "8080";
